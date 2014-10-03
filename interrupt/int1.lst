@@ -1,0 +1,93 @@
+   1               		.file	"int1.c"
+   2               	__SREG__ = 0x3f
+   3               	__SP_H__ = 0x3e
+   4               	__SP_L__ = 0x3d
+   5               	__CCP__  = 0x34
+   6               	__tmp_reg__ = 0
+   7               	__zero_reg__ = 1
+  15               	.Ltext0:
+  16               	.global	__vector_1
+  18               	__vector_1:
+  19               	.LFB6:
+  20               	.LM1:
+  21 0000 1F92      		push __zero_reg__
+  22 0002 0F92      		push r0
+  23 0004 0FB6      		in r0,__SREG__
+  24 0006 0F92      		push r0
+  25 0008 1124      		clr __zero_reg__
+  26 000a 8F93      		push r24
+  27 000c 9F93      		push r25
+  28               	/* prologue: Signal */
+  29               	/* frame size = 0 */
+  30               	.LM2:
+  31 000e 88B3      		in r24,56-32
+  32 0010 91E0      		ldi r25,lo8(1)
+  33 0012 8927      		eor r24,r25
+  34 0014 88BB      		out 56-32,r24
+  35               	/* epilogue start */
+  36               	.LM3:
+  37 0016 9F91      		pop r25
+  38 0018 8F91      		pop r24
+  39 001a 0F90      		pop r0
+  40 001c 0FBE      		out __SREG__,r0
+  41 001e 0F90      		pop r0
+  42 0020 1F90      		pop __zero_reg__
+  43 0022 1895      		reti
+  44               	.LFE6:
+  46               	.global	main
+  48               	main:
+  49               	.LFB7:
+  50               	.LM4:
+  51               	/* prologue: function */
+  52               	/* frame size = 0 */
+  53               	.LM5:
+  54 0024 B89A      		sbi 55-32,0
+  55               	.LM6:
+  56 0026 C09A      		sbi 56-32,0
+  57               	.LM7:
+  58 0028 87EE      		ldi r24,lo8(-25)
+  59 002a 81BB      		out 49-32,r24
+  60               	.LM8:
+  61               	/* #APP */
+  62               	 ;  23 "int1.c" 1
+  63 002c F894      		cli
+  64               	 ;  0 "" 2
+  65               	.LM9:
+  66               	/* #NOAPP */
+  67 002e 80E4      		ldi r24,lo8(64)
+  68 0030 8BBF      		out 91-32,r24
+  69               	.LM10:
+  70 0032 80E8      		ldi r24,lo8(-128)
+  71 0034 8FBF      		out __SREG__,r24
+  72               	.LM11:
+  73 0036 82E0      		ldi r24,lo8(2)
+  74 0038 85BF      		out 85-32,r24
+  75               	.LM12:
+  76               	/* #APP */
+  77               	 ;  30 "int1.c" 1
+  78 003a 7894      		sei
+  79               	 ;  0 "" 2
+  80               	/* #NOAPP */
+  81               	.L4:
+  82 003c 00C0      		rjmp .L4
+  83               	.LFE7:
+  85               	.global	press
+  86               	.global	press
+  87               		.section .bss
+  90               	press:
+  91 0000 0000      		.skip 2,0
+ 124               	.Letext0:
+DEFINED SYMBOLS
+                            *ABS*:00000000 int1.c
+C:\Users\Manish\AppData\Local\Temp/ccEMwMHc.s:2      *ABS*:0000003f __SREG__
+C:\Users\Manish\AppData\Local\Temp/ccEMwMHc.s:3      *ABS*:0000003e __SP_H__
+C:\Users\Manish\AppData\Local\Temp/ccEMwMHc.s:4      *ABS*:0000003d __SP_L__
+C:\Users\Manish\AppData\Local\Temp/ccEMwMHc.s:5      *ABS*:00000034 __CCP__
+C:\Users\Manish\AppData\Local\Temp/ccEMwMHc.s:6      *ABS*:00000000 __tmp_reg__
+C:\Users\Manish\AppData\Local\Temp/ccEMwMHc.s:7      *ABS*:00000001 __zero_reg__
+C:\Users\Manish\AppData\Local\Temp/ccEMwMHc.s:18     .text:00000000 __vector_1
+C:\Users\Manish\AppData\Local\Temp/ccEMwMHc.s:48     .text:00000024 main
+C:\Users\Manish\AppData\Local\Temp/ccEMwMHc.s:90     .bss:00000000 press
+
+UNDEFINED SYMBOLS
+__do_clear_bss

@@ -1,0 +1,622 @@
+   1               		.file	"button_game.c"
+   2               	__SREG__ = 0x3f
+   3               	__SP_H__ = 0x3e
+   4               	__SP_L__ = 0x3d
+   5               	__CCP__  = 0x34
+   6               	__tmp_reg__ = 0
+   7               	__zero_reg__ = 1
+  15               	.Ltext0:
+  16               	.global	blinkAll
+  18               	blinkAll:
+  19               	.LFB6:
+  20               	.LM1:
+  21               	.LVL0:
+  22               	/* prologue: function */
+  23               	/* frame size = 0 */
+  24               	.LM2:
+  25 0000 892B      		or r24,r25
+  26 0002 01F4      		brne .L2
+  27               	.LM3:
+  28 0004 18BA      		out 56-32,__zero_reg__
+  29               	.LBB102:
+  30               	.LBB103:
+  31               	.LBB104:
+  32               	.LBB105:
+  33               	.LM4:
+  34 0006 88E8      		ldi r24,lo8(5000)
+  35 0008 93E1      		ldi r25,hi8(5000)
+  36               	.LVL1:
+  37 000a FC01      		movw r30,r24
+  38               	.LVL2:
+  39               	/* #APP */
+  40               	 ;  105 "c:/winavr-20100110/lib/gcc/../../avr/include/util/delay_basic.h" 1
+  41 000c 3197      		1: sbiw r30,1
+  42 000e 01F4      		brne 1b
+  43               	 ;  0 "" 2
+  44               	/* #NOAPP */
+  45               	.LBE105:
+  46               	.LBE104:
+  47               	.LBE103:
+  48               	.LBE102:
+  49               	.LM5:
+  50 0010 2FEF      		ldi r18,lo8(-1)
+  51 0012 28BB      		out 56-32,r18
+  52               	.LBB106:
+  53               	.LBB107:
+  54               	.LBB108:
+  55               	.LBB109:
+  56               	.LM6:
+  57 0014 FC01      		movw r30,r24
+  58               	.LVL3:
+  59               	/* #APP */
+  60               	 ;  105 "c:/winavr-20100110/lib/gcc/../../avr/include/util/delay_basic.h" 1
+  61 0016 3197      		1: sbiw r30,1
+  62 0018 01F4      		brne 1b
+  63               	 ;  0 "" 2
+  64               	/* #NOAPP */
+  65               	.LBE109:
+  66               	.LBE108:
+  67               	.LBE107:
+  68               	.LBE106:
+  69               	.LM7:
+  70 001a 18BA      		out 56-32,__zero_reg__
+  71               	.LBB110:
+  72               	.LBB111:
+  73               	.LBB112:
+  74               	.LBB113:
+  75               	.LM8:
+  76 001c FC01      		movw r30,r24
+  77               	.LVL4:
+  78               	/* #APP */
+  79               	 ;  105 "c:/winavr-20100110/lib/gcc/../../avr/include/util/delay_basic.h" 1
+  80 001e 3197      		1: sbiw r30,1
+  81 0020 01F4      		brne 1b
+  82               	 ;  0 "" 2
+  83               	/* #NOAPP */
+  84               	.LBE113:
+  85               	.LBE112:
+  86               	.LBE111:
+  87               	.LBE110:
+  88               	.LM9:
+  89 0022 28BB      		out 56-32,r18
+  90               	.LBB114:
+  91               	.LBB115:
+  92               	.LBB116:
+  93               	.LBB117:
+  94               	.LM10:
+  95 0024 FC01      		movw r30,r24
+  96               	.LVL5:
+  97               	/* #APP */
+  98               	 ;  105 "c:/winavr-20100110/lib/gcc/../../avr/include/util/delay_basic.h" 1
+  99 0026 3197      		1: sbiw r30,1
+ 100 0028 01F4      		brne 1b
+ 101               	 ;  0 "" 2
+ 102               	/* #NOAPP */
+ 103               	.LBE117:
+ 104               	.LBE116:
+ 105               	.LBE115:
+ 106               	.LBE114:
+ 107               	.LM11:
+ 108 002a 18BA      		out 56-32,__zero_reg__
+ 109               	.LBB118:
+ 110               	.LBB119:
+ 111               	.LBB120:
+ 112               	.LBB121:
+ 113               	.LM12:
+ 114 002c FC01      		movw r30,r24
+ 115               	.LVL6:
+ 116               	/* #APP */
+ 117               	 ;  105 "c:/winavr-20100110/lib/gcc/../../avr/include/util/delay_basic.h" 1
+ 118 002e 3197      		1: sbiw r30,1
+ 119 0030 01F4      		brne 1b
+ 120               	 ;  0 "" 2
+ 121               	/* #NOAPP */
+ 122               	.LBE121:
+ 123               	.LBE120:
+ 124               	.LBE119:
+ 125               	.LBE118:
+ 126               	.LM13:
+ 127 0032 28BB      		out 56-32,r18
+ 128               	.LBB122:
+ 129               	.LBB123:
+ 130               	.LBB124:
+ 131               	.LBB125:
+ 132               	.LM14:
+ 133 0034 FC01      		movw r30,r24
+ 134               	.LVL7:
+ 135               	/* #APP */
+ 136               	 ;  105 "c:/winavr-20100110/lib/gcc/../../avr/include/util/delay_basic.h" 1
+ 137 0036 3197      		1: sbiw r30,1
+ 138 0038 01F4      		brne 1b
+ 139               	 ;  0 "" 2
+ 140               	/* #NOAPP */
+ 141               	.LBE125:
+ 142               	.LBE124:
+ 143               	.LBE123:
+ 144               	.LBE122:
+ 145               	.LM15:
+ 146 003a 18BA      		out 56-32,__zero_reg__
+ 147               	.LBB126:
+ 148               	.LBB127:
+ 149               	.LBB128:
+ 150               	.LBB129:
+ 151               	.LM16:
+ 152 003c FC01      		movw r30,r24
+ 153               	.LVL8:
+ 154               	/* #APP */
+ 155               	 ;  105 "c:/winavr-20100110/lib/gcc/../../avr/include/util/delay_basic.h" 1
+ 156 003e 3197      		1: sbiw r30,1
+ 157 0040 01F4      		brne 1b
+ 158               	 ;  0 "" 2
+ 159               	/* #NOAPP */
+ 160               	.LBE129:
+ 161               	.LBE128:
+ 162               	.LBE127:
+ 163               	.LBE126:
+ 164               	.LM17:
+ 165 0042 28BB      		out 56-32,r18
+ 166               	.LBB130:
+ 167               	.LBB131:
+ 168               	.LBB132:
+ 169               	.LBB133:
+ 170               	.LM18:
+ 171               	/* #APP */
+ 172               	 ;  105 "c:/winavr-20100110/lib/gcc/../../avr/include/util/delay_basic.h" 1
+ 173 0044 0197      		1: sbiw r24,1
+ 174 0046 01F4      		brne 1b
+ 175               	 ;  0 "" 2
+ 176               	.LVL9:
+ 177               	/* #NOAPP */
+ 178               	.LBE133:
+ 179               	.LBE132:
+ 180               	.LBE131:
+ 181               	.LBE130:
+ 182               	.LM19:
+ 183 0048 18BA      		out 56-32,__zero_reg__
+ 184 004a 0895      		ret
+ 185               	.LVL10:
+ 186               	.L2:
+ 187               	.LM20:
+ 188 004c 1BBA      		out 59-32,__zero_reg__
+ 189               	.LBB134:
+ 190               	.LBB135:
+ 191               	.LBB136:
+ 192               	.LBB137:
+ 193               	.LM21:
+ 194 004e 88E8      		ldi r24,lo8(5000)
+ 195 0050 93E1      		ldi r25,hi8(5000)
+ 196               	.LVL11:
+ 197 0052 FC01      		movw r30,r24
+ 198               	.LVL12:
+ 199               	/* #APP */
+ 200               	 ;  105 "c:/winavr-20100110/lib/gcc/../../avr/include/util/delay_basic.h" 1
+ 201 0054 3197      		1: sbiw r30,1
+ 202 0056 01F4      		brne 1b
+ 203               	 ;  0 "" 2
+ 204               	/* #NOAPP */
+ 205               	.LBE137:
+ 206               	.LBE136:
+ 207               	.LBE135:
+ 208               	.LBE134:
+ 209               	.LM22:
+ 210 0058 2FEF      		ldi r18,lo8(-1)
+ 211 005a 2BBB      		out 59-32,r18
+ 212               	.LBB138:
+ 213               	.LBB139:
+ 214               	.LBB140:
+ 215               	.LBB141:
+ 216               	.LM23:
+ 217 005c FC01      		movw r30,r24
+ 218               	.LVL13:
+ 219               	/* #APP */
+ 220               	 ;  105 "c:/winavr-20100110/lib/gcc/../../avr/include/util/delay_basic.h" 1
+ 221 005e 3197      		1: sbiw r30,1
+ 222 0060 01F4      		brne 1b
+ 223               	 ;  0 "" 2
+ 224               	/* #NOAPP */
+ 225               	.LBE141:
+ 226               	.LBE140:
+ 227               	.LBE139:
+ 228               	.LBE138:
+ 229               	.LM24:
+ 230 0062 1BBA      		out 59-32,__zero_reg__
+ 231               	.LBB142:
+ 232               	.LBB143:
+ 233               	.LBB144:
+ 234               	.LBB145:
+ 235               	.LM25:
+ 236 0064 FC01      		movw r30,r24
+ 237               	.LVL14:
+ 238               	/* #APP */
+ 239               	 ;  105 "c:/winavr-20100110/lib/gcc/../../avr/include/util/delay_basic.h" 1
+ 240 0066 3197      		1: sbiw r30,1
+ 241 0068 01F4      		brne 1b
+ 242               	 ;  0 "" 2
+ 243               	/* #NOAPP */
+ 244               	.LBE145:
+ 245               	.LBE144:
+ 246               	.LBE143:
+ 247               	.LBE142:
+ 248               	.LM26:
+ 249 006a 2BBB      		out 59-32,r18
+ 250               	.LBB146:
+ 251               	.LBB147:
+ 252               	.LBB148:
+ 253               	.LBB149:
+ 254               	.LM27:
+ 255 006c FC01      		movw r30,r24
+ 256               	.LVL15:
+ 257               	/* #APP */
+ 258               	 ;  105 "c:/winavr-20100110/lib/gcc/../../avr/include/util/delay_basic.h" 1
+ 259 006e 3197      		1: sbiw r30,1
+ 260 0070 01F4      		brne 1b
+ 261               	 ;  0 "" 2
+ 262               	/* #NOAPP */
+ 263               	.LBE149:
+ 264               	.LBE148:
+ 265               	.LBE147:
+ 266               	.LBE146:
+ 267               	.LM28:
+ 268 0072 1BBA      		out 59-32,__zero_reg__
+ 269               	.LBB150:
+ 270               	.LBB151:
+ 271               	.LBB152:
+ 272               	.LBB153:
+ 273               	.LM29:
+ 274 0074 FC01      		movw r30,r24
+ 275               	.LVL16:
+ 276               	/* #APP */
+ 277               	 ;  105 "c:/winavr-20100110/lib/gcc/../../avr/include/util/delay_basic.h" 1
+ 278 0076 3197      		1: sbiw r30,1
+ 279 0078 01F4      		brne 1b
+ 280               	 ;  0 "" 2
+ 281               	/* #NOAPP */
+ 282               	.LBE153:
+ 283               	.LBE152:
+ 284               	.LBE151:
+ 285               	.LBE150:
+ 286               	.LM30:
+ 287 007a 2BBB      		out 59-32,r18
+ 288               	.LBB154:
+ 289               	.LBB155:
+ 290               	.LBB156:
+ 291               	.LBB157:
+ 292               	.LM31:
+ 293 007c FC01      		movw r30,r24
+ 294               	.LVL17:
+ 295               	/* #APP */
+ 296               	 ;  105 "c:/winavr-20100110/lib/gcc/../../avr/include/util/delay_basic.h" 1
+ 297 007e 3197      		1: sbiw r30,1
+ 298 0080 01F4      		brne 1b
+ 299               	 ;  0 "" 2
+ 300               	/* #NOAPP */
+ 301               	.LBE157:
+ 302               	.LBE156:
+ 303               	.LBE155:
+ 304               	.LBE154:
+ 305               	.LM32:
+ 306 0082 1BBA      		out 59-32,__zero_reg__
+ 307               	.LBB158:
+ 308               	.LBB159:
+ 309               	.LBB160:
+ 310               	.LBB161:
+ 311               	.LM33:
+ 312 0084 FC01      		movw r30,r24
+ 313               	.LVL18:
+ 314               	/* #APP */
+ 315               	 ;  105 "c:/winavr-20100110/lib/gcc/../../avr/include/util/delay_basic.h" 1
+ 316 0086 3197      		1: sbiw r30,1
+ 317 0088 01F4      		brne 1b
+ 318               	 ;  0 "" 2
+ 319               	/* #NOAPP */
+ 320               	.LBE161:
+ 321               	.LBE160:
+ 322               	.LBE159:
+ 323               	.LBE158:
+ 324               	.LM34:
+ 325 008a 2BBB      		out 59-32,r18
+ 326               	.LBB162:
+ 327               	.LBB163:
+ 328               	.LBB164:
+ 329               	.LBB165:
+ 330               	.LM35:
+ 331               	/* #APP */
+ 332               	 ;  105 "c:/winavr-20100110/lib/gcc/../../avr/include/util/delay_basic.h" 1
+ 333 008c 0197      		1: sbiw r24,1
+ 334 008e 01F4      		brne 1b
+ 335               	 ;  0 "" 2
+ 336               	.LVL19:
+ 337               	/* #NOAPP */
+ 338               	.LBE165:
+ 339               	.LBE164:
+ 340               	.LBE163:
+ 341               	.LBE162:
+ 342               	.LM36:
+ 343 0090 1BBA      		out 59-32,__zero_reg__
+ 344 0092 0895      		ret
+ 345               	.LFE6:
+ 347               	.global	processButtonPressed
+ 349               	processButtonPressed:
+ 350               	.LFB7:
+ 351               	.LM37:
+ 352               	.LVL20:
+ 353 0094 CF93      		push r28
+ 354 0096 DF93      		push r29
+ 355               	/* prologue: function */
+ 356               	/* frame size = 0 */
+ 357 0098 EC01      		movw r28,r24
+ 358               	.LM38:
+ 359 009a 9C01      		movw r18,r24
+ 360 009c 220F      		lsl r18
+ 361 009e 331F      		rol r19
+ 362 00a0 F901      		movw r30,r18
+ 363 00a2 E050      		subi r30,lo8(-(processButton))
+ 364 00a4 F040      		sbci r31,hi8(-(processButton))
+ 365 00a6 4081      		ld r20,Z
+ 366 00a8 5181      		ldd r21,Z+1
+ 367 00aa 4130      		cpi r20,1
+ 368 00ac 5105      		cpc r21,__zero_reg__
+ 369 00ae 01F4      		brne .L10
+ 370               	.LM39:
+ 371 00b0 F901      		movw r30,r18
+ 372 00b2 E050      		subi r30,lo8(-(pressedButton))
+ 373 00b4 F040      		sbci r31,hi8(-(pressedButton))
+ 374 00b6 8081      		ld r24,Z
+ 375 00b8 9181      		ldd r25,Z+1
+ 376               	.LVL21:
+ 377 00ba 0196      		adiw r24,1
+ 378 00bc 9183      		std Z+1,r25
+ 379 00be 8083      		st Z,r24
+ 380               	.LM40:
+ 381 00c0 893C      		cpi r24,201
+ 382 00c2 9105      		cpc r25,__zero_reg__
+ 383 00c4 04F0      		brlt .L10
+ 384               	.LM41:
+ 385 00c6 F901      		movw r30,r18
+ 386 00c8 E050      		subi r30,lo8(-(ledLevel))
+ 387 00ca F040      		sbci r31,hi8(-(ledLevel))
+ 388 00cc 8081      		ld r24,Z
+ 389 00ce 9181      		ldd r25,Z+1
+ 390 00d0 8830      		cpi r24,8
+ 391 00d2 9105      		cpc r25,__zero_reg__
+ 392 00d4 04F0      		brlt .L7
+ 393               	.LM42:
+ 394 00d6 5183      		std Z+1,r21
+ 395 00d8 4083      		st Z,r20
+ 396               	.LM43:
+ 397 00da CE01      		movw r24,r28
+ 398 00dc 0E94 0000 		call blinkAll
+ 399 00e0 00C0      		rjmp .L8
+ 400               	.L7:
+ 401 00e2 9A01      		movw r18,r20
+ 402 00e4 082E      		mov r0,r24
+ 403 00e6 00C0      		rjmp 2f
+ 404 00e8 220F      	1:	lsl r18
+ 405 00ea 331F      		rol r19
+ 406 00ec 0A94      	2:	dec r0
+ 407 00ee 02F4      		brpl 1b
+ 408 00f0 AC01      		movw r20,r24
+ 409 00f2 4F5F      		subi r20,lo8(-(1))
+ 410 00f4 5F4F      		sbci r21,hi8(-(1))
+ 411               	.LM44:
+ 412 00f6 2097      		sbiw r28,0
+ 413 00f8 01F4      		brne .L9
+ 414               	.LM45:
+ 415 00fa 88B3      		in r24,56-32
+ 416 00fc 822B      		or r24,r18
+ 417 00fe 88BB      		out 56-32,r24
+ 418               	.LM46:
+ 419 0100 5093 0000 		sts (ledLevel)+1,r21
+ 420 0104 4093 0000 		sts ledLevel,r20
+ 421 0108 00C0      		rjmp .L8
+ 422               	.L9:
+ 423               	.LM47:
+ 424 010a 8BB3      		in r24,59-32
+ 425 010c 822B      		or r24,r18
+ 426 010e 8BBB      		out 59-32,r24
+ 427               	.LM48:
+ 428 0110 5183      		std Z+1,r21
+ 429 0112 4083      		st Z,r20
+ 430               	.L8:
+ 431               	.LM49:
+ 432 0114 FE01      		movw r30,r28
+ 433 0116 EE0F      		lsl r30
+ 434 0118 FF1F      		rol r31
+ 435 011a DF01      		movw r26,r30
+ 436 011c A050      		subi r26,lo8(-(pressedButton))
+ 437 011e B040      		sbci r27,hi8(-(pressedButton))
+ 438 0120 1D92      		st X+,__zero_reg__
+ 439 0122 1C92      		st X,__zero_reg__
+ 440               	.LM50:
+ 441 0124 E050      		subi r30,lo8(-(processButton))
+ 442 0126 F040      		sbci r31,hi8(-(processButton))
+ 443 0128 1182      		std Z+1,__zero_reg__
+ 444 012a 1082      		st Z,__zero_reg__
+ 445               	.LVL22:
+ 446               	.L10:
+ 447               	/* epilogue start */
+ 448               	.LM51:
+ 449 012c DF91      		pop r29
+ 450 012e CF91      		pop r28
+ 451               	.LVL23:
+ 452 0130 0895      		ret
+ 453               	.LFE7:
+ 455               	.global	processButtonReleased
+ 457               	processButtonReleased:
+ 458               	.LFB8:
+ 459               	.LM52:
+ 460               	.LVL24:
+ 461 0132 CF93      		push r28
+ 462 0134 DF93      		push r29
+ 463               	/* prologue: function */
+ 464               	/* frame size = 0 */
+ 465               	.LM53:
+ 466 0136 EC01      		movw r28,r24
+ 467 0138 CC0F      		lsl r28
+ 468 013a DD1F      		rol r29
+ 469 013c DE01      		movw r26,r28
+ 470 013e A050      		subi r26,lo8(-(releaseButton))
+ 471 0140 B040      		sbci r27,hi8(-(releaseButton))
+ 472 0142 8D91      		ld r24,X+
+ 473 0144 9C91      		ld r25,X
+ 474 0146 1197      		sbiw r26,1
+ 475               	.LVL25:
+ 476 0148 0196      		adiw r24,1
+ 477 014a 1196      		adiw r26,1
+ 478 014c 9C93      		st X,r25
+ 479 014e 8E93      		st -X,r24
+ 480               	.LM54:
+ 481 0150 893C      		cpi r24,201
+ 482 0152 9105      		cpc r25,__zero_reg__
+ 483 0154 04F0      		brlt .L13
+ 484               	.LM55:
+ 485 0156 FE01      		movw r30,r28
+ 486 0158 E050      		subi r30,lo8(-(pressedButton))
+ 487 015a F040      		sbci r31,hi8(-(pressedButton))
+ 488 015c 1182      		std Z+1,__zero_reg__
+ 489 015e 1082      		st Z,__zero_reg__
+ 490               	.LM56:
+ 491 0160 1D92      		st X+,__zero_reg__
+ 492 0162 1C92      		st X,__zero_reg__
+ 493               	.LM57:
+ 494 0164 C050      		subi r28,lo8(-(processButton))
+ 495 0166 D040      		sbci r29,hi8(-(processButton))
+ 496 0168 81E0      		ldi r24,lo8(1)
+ 497 016a 90E0      		ldi r25,hi8(1)
+ 498 016c 9983      		std Y+1,r25
+ 499 016e 8883      		st Y,r24
+ 500               	.L13:
+ 501               	/* epilogue start */
+ 502               	.LM58:
+ 503 0170 DF91      		pop r29
+ 504 0172 CF91      		pop r28
+ 505 0174 0895      		ret
+ 506               	.LFE8:
+ 508               	.global	resetAll
+ 510               	resetAll:
+ 511               	.LFB9:
+ 512               	.LM59:
+ 513               	/* prologue: function */
+ 514               	/* frame size = 0 */
+ 515               	.LM60:
+ 516 0176 18BA      		out 56-32,__zero_reg__
+ 517               	.LM61:
+ 518 0178 1BBA      		out 59-32,__zero_reg__
+ 519               	.LM62:
+ 520 017a 81E0      		ldi r24,lo8(1)
+ 521 017c 90E0      		ldi r25,hi8(1)
+ 522 017e 9093 0000 		sts (ledLevel)+1,r25
+ 523 0182 8093 0000 		sts ledLevel,r24
+ 524               	.LM63:
+ 525 0186 9093 0000 		sts (ledLevel+2)+1,r25
+ 526 018a 8093 0000 		sts ledLevel+2,r24
+ 527               	.LM64:
+ 528 018e 1092 0000 		sts (pressedButton)+1,__zero_reg__
+ 529 0192 1092 0000 		sts pressedButton,__zero_reg__
+ 530               	.LM65:
+ 531 0196 1092 0000 		sts (pressedButton+2)+1,__zero_reg__
+ 532 019a 1092 0000 		sts pressedButton+2,__zero_reg__
+ 533               	.LM66:
+ 534 019e 1092 0000 		sts (releaseButton)+1,__zero_reg__
+ 535 01a2 1092 0000 		sts releaseButton,__zero_reg__
+ 536               	.LM67:
+ 537 01a6 1092 0000 		sts (releaseButton+2)+1,__zero_reg__
+ 538 01aa 1092 0000 		sts releaseButton+2,__zero_reg__
+ 539               	.LM68:
+ 540 01ae 9093 0000 		sts (processButton)+1,r25
+ 541 01b2 8093 0000 		sts processButton,r24
+ 542               	.LM69:
+ 543 01b6 9093 0000 		sts (processButton+2)+1,r25
+ 544 01ba 8093 0000 		sts processButton+2,r24
+ 545               	.LM70:
+ 546 01be 80E0      		ldi r24,lo8(0)
+ 547 01c0 90E0      		ldi r25,hi8(0)
+ 548 01c2 0E94 0000 		call blinkAll
+ 549               	.LM71:
+ 550 01c6 81E0      		ldi r24,lo8(1)
+ 551 01c8 90E0      		ldi r25,hi8(1)
+ 552 01ca 0E94 0000 		call blinkAll
+ 553               	/* epilogue start */
+ 554               	.LM72:
+ 555 01ce 0895      		ret
+ 556               	.LFE9:
+ 558               	.global	main
+ 560               	main:
+ 561               	.LFB10:
+ 562               	.LM73:
+ 563               	/* prologue: function */
+ 564               	/* frame size = 0 */
+ 565               	.LM74:
+ 566 01d0 8EEF      		ldi r24,lo8(-2)
+ 567 01d2 87BB      		out 55-32,r24
+ 568               	.LM75:
+ 569 01d4 8ABB      		out 58-32,r24
+ 570               	.LM76:
+ 571 01d6 8898      		cbi 49-32,0
+ 572               	.LM77:
+ 573 01d8 18BA      		out 56-32,__zero_reg__
+ 574               	.LM78:
+ 575 01da 1BBA      		out 59-32,__zero_reg__
+ 576               	.LM79:
+ 577 01dc 0E94 0000 		call resetAll
+ 578               	.L23:
+ 579               	.LM80:
+ 580 01e0 809B      		sbis 48-32,0
+ 581 01e2 00C0      		rjmp .L17
+ 582               	.LM81:
+ 583 01e4 0E94 0000 		call resetAll
+ 584               	.L17:
+ 585               	.LM82:
+ 586 01e8 B09B      		sbis 54-32,0
+ 587 01ea 00C0      		rjmp .L18
+ 588               	.LM83:
+ 589 01ec 80E0      		ldi r24,lo8(0)
+ 590 01ee 90E0      		ldi r25,hi8(0)
+ 591 01f0 0E94 0000 		call processButtonPressed
+ 592 01f4 00C0      		rjmp .L19
+ 593               	.L18:
+ 594               	.LM84:
+ 595 01f6 80E0      		ldi r24,lo8(0)
+ 596 01f8 90E0      		ldi r25,hi8(0)
+ 597 01fa 0E94 0000 		call processButtonReleased
+ 598               	.L19:
+ 599               	.LM85:
+ 600 01fe C89B      		sbis 57-32,0
+ 601 0200 00C0      		rjmp .L20
+ 602               	.LM86:
+ 603 0202 81E0      		ldi r24,lo8(1)
+ 604 0204 90E0      		ldi r25,hi8(1)
+ 605 0206 0E94 0000 		call processButtonPressed
+ 606 020a 00C0      		rjmp .L23
+ 607               	.L20:
+ 608               	.LM87:
+ 609 020c 81E0      		ldi r24,lo8(1)
+ 610 020e 90E0      		ldi r25,hi8(1)
+ 611 0210 0E94 0000 		call processButtonReleased
+ 612 0214 00C0      		rjmp .L23
+ 613               	.LFE10:
+ 615               		.comm pressedButton,4,1
+ 616               		.comm releaseButton,4,1
+ 617               		.comm ledLevel,4,1
+ 618               		.comm processButton,4,1
+ 675               	.Letext0:
+DEFINED SYMBOLS
+                            *ABS*:00000000 button_game.c
+C:\Users\Manish\AppData\Local\Temp/ccGJkyer.s:2      *ABS*:0000003f __SREG__
+C:\Users\Manish\AppData\Local\Temp/ccGJkyer.s:3      *ABS*:0000003e __SP_H__
+C:\Users\Manish\AppData\Local\Temp/ccGJkyer.s:4      *ABS*:0000003d __SP_L__
+C:\Users\Manish\AppData\Local\Temp/ccGJkyer.s:5      *ABS*:00000034 __CCP__
+C:\Users\Manish\AppData\Local\Temp/ccGJkyer.s:6      *ABS*:00000000 __tmp_reg__
+C:\Users\Manish\AppData\Local\Temp/ccGJkyer.s:7      *ABS*:00000001 __zero_reg__
+C:\Users\Manish\AppData\Local\Temp/ccGJkyer.s:18     .text:00000000 blinkAll
+C:\Users\Manish\AppData\Local\Temp/ccGJkyer.s:349    .text:00000094 processButtonPressed
+                            *COM*:00000004 processButton
+                            *COM*:00000004 pressedButton
+                            *COM*:00000004 ledLevel
+C:\Users\Manish\AppData\Local\Temp/ccGJkyer.s:457    .text:00000132 processButtonReleased
+                            *COM*:00000004 releaseButton
+C:\Users\Manish\AppData\Local\Temp/ccGJkyer.s:510    .text:00000176 resetAll
+C:\Users\Manish\AppData\Local\Temp/ccGJkyer.s:560    .text:000001d0 main
+
+UNDEFINED SYMBOLS
+__do_clear_bss
