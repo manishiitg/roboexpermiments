@@ -2,18 +2,11 @@
 #include <util/delay.h>
 #include <avr/interrupt.h>
 
-
-
 ISR(INT0_vect){
-   //press++;
-   //if(press > 200){
-       //software debouce
-	   PORTB ^= 1 << PINB0;
-	//   press = 0;
-   //}
-   
+	PORTB ^= 1 << PINB0;
+	_delay_ms(50); //debouce so that ISR is not called many times in a single button press
 }
-int press = 0;
+
 int main(void){
 
    DDRB |= (1 << PINB0); //set pin0 as output
@@ -25,7 +18,7 @@ int main(void){
    SREG = 1 << 7;
    //MCUCR = 1<<ISC01 | 1<<ISC00;  // on rising edge
    
-   MCUCR = 1<<ISC01 | 0<<ISC00;  // on rising edge
+   MCUCR = 1<<ISC01 | 1 <<ISC00;  // on rising edge
    
    sei(); //enable global interrupts
    
