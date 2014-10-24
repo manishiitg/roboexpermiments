@@ -1,0 +1,51 @@
+   1               		.file	"timer.c"
+   2               	__SREG__ = 0x3f
+   3               	__SP_H__ = 0x3e
+   4               	__SP_L__ = 0x3d
+   5               	__CCP__  = 0x34
+   6               	__tmp_reg__ = 0
+   7               	__zero_reg__ = 1
+  15               	.Ltext0:
+  16               	.global	main
+  18               	main:
+  19               	.LFB2:
+  20               	.LM1:
+  21               	/* prologue: function */
+  22               	/* frame size = 0 */
+  23               	.LM2:
+  24 0000 81B3      		in r24,49-32
+  25 0002 8063      		ori r24,lo8(48)
+  26 0004 81BB      		out 49-32,r24
+  27               	.LM3:
+  28 0006 8EB5      		in r24,78-32
+  29 0008 8B60      		ori r24,lo8(11)
+  30 000a 8EBD      		out 78-32,r24
+  31               	.LM4:
+  32 000c 88E0      		ldi r24,lo8(15624)
+  33 000e 9DE3      		ldi r25,hi8(15624)
+  34 0010 9BBD      		out (74)+1-32,r25
+  35 0012 8ABD      		out 74-32,r24
+  36               	.LM5:
+  37 0014 82E4      		ldi r24,lo8(3906)
+  38 0016 9FE0      		ldi r25,hi8(3906)
+  39 0018 99BD      		out (72)+1-32,r25
+  40 001a 88BD      		out 72-32,r24
+  41               	.LM6:
+  42 001c 8FB5      		in r24,79-32
+  43 001e 8065      		ori r24,lo8(80)
+  44 0020 8FBD      		out 79-32,r24
+  45               	.L2:
+  46 0022 00C0      		rjmp .L2
+  47               	.LFE2:
+  73               	.Letext0:
+DEFINED SYMBOLS
+                            *ABS*:00000000 timer.c
+C:\Users\Manish\AppData\Local\Temp/ccET8Z8r.s:2      *ABS*:0000003f __SREG__
+C:\Users\Manish\AppData\Local\Temp/ccET8Z8r.s:3      *ABS*:0000003e __SP_H__
+C:\Users\Manish\AppData\Local\Temp/ccET8Z8r.s:4      *ABS*:0000003d __SP_L__
+C:\Users\Manish\AppData\Local\Temp/ccET8Z8r.s:5      *ABS*:00000034 __CCP__
+C:\Users\Manish\AppData\Local\Temp/ccET8Z8r.s:6      *ABS*:00000000 __tmp_reg__
+C:\Users\Manish\AppData\Local\Temp/ccET8Z8r.s:7      *ABS*:00000001 __zero_reg__
+C:\Users\Manish\AppData\Local\Temp/ccET8Z8r.s:18     .text:00000000 main
+
+NO UNDEFINED SYMBOLS

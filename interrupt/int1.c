@@ -1,6 +1,7 @@
 #include <avr/io.h>
 #include <util/delay.h>
 #include <avr/interrupt.h>
+#include <util/atomic.h>
 
 ISR(INT0_vect){
 	PORTB ^= 1 << PINB0;
@@ -16,13 +17,15 @@ int main(void){
    cli();  //clear global interrupts
    GICR = 1 << INT0; //enable intrupt on INT0
    SREG = 1 << 7;
-   //MCUCR = 1<<ISC01 | 1<<ISC00;  // on rising edge
    
    MCUCR = 1<<ISC01 | 1 <<ISC00;  // on rising edge
    
    sei(); //enable global interrupts
    
    while(1){
+   
+      ATOMIC_BLOCK(ATOMIC_RESTORESTATE){
+	  }
    }
    
 

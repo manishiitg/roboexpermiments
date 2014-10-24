@@ -8,7 +8,7 @@
   15               	.Ltext0:
   16               	.global	__vector_1
   18               	__vector_1:
-  19               	.LFB6:
+  19               	.LFB11:
   20               	.LM1:
   21 0000 1F92      		push __zero_reg__
   22 0002 0F92      		push r0
@@ -31,10 +31,10 @@
   39 001e 84EF      		ldi r24,lo8(500)
   40 0020 91E0      		ldi r25,hi8(500)
   41               	.LVL0:
-  42               	.LBB12:
-  43               	.LBB13:
-  44               	.LBB14:
-  45               	.LBB15:
+  42               	.LBB17:
+  43               	.LBB18:
+  44               	.LBB19:
+  45               	.LBB20:
   46               	.LM3:
   47 0022 28EC      		ldi r18,lo8(200)
   48 0024 30E0      		ldi r19,hi8(200)
@@ -47,15 +47,15 @@
   55 002a 01F4      		brne 1b
   56               	 ;  0 "" 2
   57               	/* #NOAPP */
-  58               	.LBE15:
-  59               	.LBE14:
+  58               	.LBE20:
+  59               	.LBE19:
   60               	.LM4:
   61 002c 0197      		sbiw r24,1
   62               	.LM5:
   63 002e 01F4      		brne .L2
   64               	/* epilogue start */
-  65               	.LBE13:
-  66               	.LBE12:
+  65               	.LBE18:
+  66               	.LBE17:
   67               	.LM6:
   68 0030 FF91      		pop r31
   69 0032 EF91      		pop r30
@@ -70,10 +70,10 @@
   78 0040 0F90      		pop r0
   79 0042 1F90      		pop __zero_reg__
   80 0044 1895      		reti
-  81               	.LFE6:
+  81               	.LFE11:
   83               	.global	main
   85               	main:
-  86               	.LFB7:
+  86               	.LFB12:
   87               	.LM7:
   88               	/* prologue: function */
   89               	/* frame size = 0 */
@@ -86,7 +86,7 @@
   96 004c 81BB      		out 49-32,r24
   97               	.LM11:
   98               	/* #APP */
-  99               	 ;  16 "int1.c" 1
+  99               	 ;  17 "int1.c" 1
  100 004e F894      		cli
  101               	 ;  0 "" 2
  102               	.LM12:
@@ -106,18 +106,40 @@
  116               	 ;  0 "" 2
  117               	/* #NOAPP */
  118               	.L6:
- 119 005e 00C0      		rjmp .L6
- 120               	.LFE7:
- 154               	.Letext0:
+ 119               	.LBB21:
+ 120               	.LM16:
+ 121 005e 8FB7      		in r24,__SREG__
+ 122               	.LVL4:
+ 123               	.LBB22:
+ 124               	.LBB23:
+ 125               	.LM17:
+ 126               	/* #APP */
+ 127               	 ;  50 "c:/winavr-20100110/lib/gcc/../../avr/include/util/atomic.h" 1
+ 128 0060 F894      		cli
+ 129               	 ;  0 "" 2
+ 130               	/* #NOAPP */
+ 131               	.LBE23:
+ 132               	.LBE22:
+ 133               	.LBB24:
+ 134               	.LBB25:
+ 135               	.LM18:
+ 136 0062 8FBF      		out __SREG__,r24
+ 137               	.LM19:
+ 138 0064 00C0      		rjmp .L6
+ 139               	.LBE25:
+ 140               	.LBE24:
+ 141               	.LBE21:
+ 142               	.LFE12:
+ 176               	.Letext0:
 DEFINED SYMBOLS
                             *ABS*:00000000 int1.c
-C:\Users\Manish\AppData\Local\Temp/ccEzJM2L.s:2      *ABS*:0000003f __SREG__
-C:\Users\Manish\AppData\Local\Temp/ccEzJM2L.s:3      *ABS*:0000003e __SP_H__
-C:\Users\Manish\AppData\Local\Temp/ccEzJM2L.s:4      *ABS*:0000003d __SP_L__
-C:\Users\Manish\AppData\Local\Temp/ccEzJM2L.s:5      *ABS*:00000034 __CCP__
-C:\Users\Manish\AppData\Local\Temp/ccEzJM2L.s:6      *ABS*:00000000 __tmp_reg__
-C:\Users\Manish\AppData\Local\Temp/ccEzJM2L.s:7      *ABS*:00000001 __zero_reg__
-C:\Users\Manish\AppData\Local\Temp/ccEzJM2L.s:18     .text:00000000 __vector_1
-C:\Users\Manish\AppData\Local\Temp/ccEzJM2L.s:85     .text:00000046 main
+C:\Users\Manish\AppData\Local\Temp/ccdUJpd3.s:2      *ABS*:0000003f __SREG__
+C:\Users\Manish\AppData\Local\Temp/ccdUJpd3.s:3      *ABS*:0000003e __SP_H__
+C:\Users\Manish\AppData\Local\Temp/ccdUJpd3.s:4      *ABS*:0000003d __SP_L__
+C:\Users\Manish\AppData\Local\Temp/ccdUJpd3.s:5      *ABS*:00000034 __CCP__
+C:\Users\Manish\AppData\Local\Temp/ccdUJpd3.s:6      *ABS*:00000000 __tmp_reg__
+C:\Users\Manish\AppData\Local\Temp/ccdUJpd3.s:7      *ABS*:00000001 __zero_reg__
+C:\Users\Manish\AppData\Local\Temp/ccdUJpd3.s:18     .text:00000000 __vector_1
+C:\Users\Manish\AppData\Local\Temp/ccdUJpd3.s:85     .text:00000046 main
 
 NO UNDEFINED SYMBOLS

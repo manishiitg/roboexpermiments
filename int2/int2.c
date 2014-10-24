@@ -5,12 +5,15 @@
 
 ISR(INT2_vect){
 	PORTB ^= 1 << PINB3;
+	_delay_ms(50);
 }
 ISR(INT1_vect){
 	PORTB ^= 1 << PINB1;
+	_delay_ms(50);
 }
 ISR(INT0_vect){
 	PORTB ^= 1 << PINB0;
+	_delay_ms(50);
    
 }
 int main(void){
